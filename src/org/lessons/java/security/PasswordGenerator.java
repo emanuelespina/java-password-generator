@@ -1,6 +1,5 @@
 package org.lessons.java.security;
 
-import java.sql.Date;
 import java.util.Scanner;
 
 public class PasswordGenerator {
@@ -31,11 +30,24 @@ public class PasswordGenerator {
 
         //inserimento data di nascita
 
-        System.out.println("Inserisci il tuo colore preferito gg/mm/aaaa");
+        System.out.println("Inserisci il giorno in cui sei nato in formato numerico");
+
+        String strDayBirth = input.nextLine();
+        int DayBirth = Integer.parseInt(strDayBirth);
+
+        System.out.println("Inserisci il mese in cui sei nato in formato numerico");
+
+        String strMonthBirth = input.nextLine();
+        int MonthBirth = Integer.parseInt(strMonthBirth);
+
+        System.out.println("Inserisci l'anno in cui sei nato in formato numerico");
+
+        String strYearBirth = input.nextLine(); 
+        int YearBirth = Integer.parseInt(strYearBirth);
 
         //costruzione della pw
         
-        String password = name + "-" + lastname + "-" + favoriteColor + "-";
+        String password = name + "-" + lastname + "-" + favoriteColor + "-" + (DayBirth + MonthBirth + YearBirth);
 
         System.out.println(password);
 
@@ -49,9 +61,9 @@ public class PasswordGenerator {
 //nome => string name 
 //cognome => string lastname 
 //colore preferito => string favoriteColor
-//data di nascita => date birthDate
+//data di nascita => da divide in giorno mese e anno 
 
-//converitore la data i un oggetto numero per poter sommare gli addendi 
+//chiedo il giorno il mese e l'anno in cui è nato e li converto in numeri interi 
 
 //sommare gli addendi per ottenere il numero della pw
 
