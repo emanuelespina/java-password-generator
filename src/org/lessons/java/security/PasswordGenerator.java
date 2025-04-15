@@ -28,7 +28,7 @@ public class PasswordGenerator {
 
         String favoriteColor = input.nextLine();
 
-        //inserimento data di nascita
+        //inserimento data di nascita con tre metodi
 
         System.out.println("Inserisci il giorno in cui sei nato in formato numerico");
 
@@ -36,14 +36,12 @@ public class PasswordGenerator {
         int DayBirth = Integer.parseInt(strDayBirth);
 
         System.out.println("Inserisci il mese in cui sei nato in formato numerico");
-
-        String strMonthBirth = input.nextLine();
-        int MonthBirth = Integer.parseInt(strMonthBirth);
+        
+        int MonthBirth = Integer.parseInt(input.nextLine());
 
         System.out.println("Inserisci l'anno in cui sei nato in formato numerico");
 
-        String strYearBirth = input.nextLine(); 
-        int YearBirth = Integer.parseInt(strYearBirth);
+        int YearBirth = input.nextInt();          
 
         //costruzione della pw
         
